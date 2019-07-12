@@ -1,0 +1,14 @@
+{
+  "name": "functional",
+  "version": "1.0.0",
+  "main": "flipcoin.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
+}

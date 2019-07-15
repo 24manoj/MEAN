@@ -2,6 +2,7 @@
   "name": "functional",
   "version": "1.0.0",
   "main": "flipcoin.js",
+  
   "scripts": {
     "test": "test"
   },

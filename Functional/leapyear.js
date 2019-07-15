@@ -1,5 +1,5 @@
 var read=require('readline-sync');
-var year=read.question("Year to check leap year    ");
+var year=read.questionInt("Year to check leap year    ");
 var res=false;
 if(year%4==0) { 
   res=true;

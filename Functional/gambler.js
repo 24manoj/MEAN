@@ -20,3 +20,4 @@ for(var i=0;i<num;i++){
 console.log(wins +"  Wins over "+s+" Stakes");
 console.log("Average win percent  "+((wins/num)*100));
 
+

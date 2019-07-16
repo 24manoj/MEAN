@@ -18,7 +18,7 @@ if(n<1)
     module.exports.ar1=ar1;
 module.exports.arr=arr;
 sort(0,arr,(arr.length-1));
-
+console.log(arr);
 }
 
 function sort(l,a,n)

@@ -1,4 +1,3 @@
-var util=require('util');
 var n=1000;
 var arr=[];
 for(var i=2;i<n;i++){
@@ -7,9 +6,7 @@ for(var i=2;i<n;i++){
     if(i%j==0)
      res=false;
     }
-
  if(res==true)
  arr.push(i);
 }
-//util.print(arr);
-util.log("hello");
+console.log(arr);

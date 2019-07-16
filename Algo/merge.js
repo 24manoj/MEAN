@@ -1,16 +1,22 @@
 var read=require('readline-sync');
 var arr=[];
 
-
- 
 function inp()
 {
-    var n=read.questionInt("Enter nunber of arrays required ");
+module.exports.n= n=read.questionInt("Enter number of arrays required ");
+if(n<1)
+{
+    console.log("N cant be lesser then 1");
+    return;
+}
     console.log("Enter them ");
     for(var i=0;i<n;i++){
         arr.push(read.questionInt());
     }
-
+    var ar1=arr;
+    console.log(ar1);
+    module.exports.ar1=ar1;
+module.exports.arr=arr;
 sort(0,arr,(arr.length-1));
 
 }

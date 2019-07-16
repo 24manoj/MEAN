@@ -2,7 +2,7 @@ var assert=require('Chai').assert;
 
 var should = require('chai').should();
 var sum=require('E://MEAN//Functional//sumofthree');
-describe("Simple",function(){
+describe("Sum of three",function(){
     it("N is a number ",function(){
 var sa=sum;
  assert.typeOf(sa,"Number");

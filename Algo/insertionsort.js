@@ -42,8 +42,8 @@ static sort(a)
         }
        
         console.log("Elpased time is",((new Date())-start),"Ms");
-    
-    return a;
+
+        return a;
     }
 }var c;
 console.log(c=sorting.inp());

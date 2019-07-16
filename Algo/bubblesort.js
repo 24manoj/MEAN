@@ -1,13 +1,15 @@
 var read=require('readline-sync');
+var arr=[];
 class sorting
 {
 static inp()
-{var arr=[];
+{
     var n=read.questionInt("Enter number of elemnts need");
     console.log("Enter elements");
     for(var i=0;i<n;i++){
         arr.push(read.questionInt());
     }
+   module.exports.arr=arr;
    return(this.sort(arr));
 }
 static sort(a)
@@ -26,6 +28,8 @@ static sort(a)
             }
         }
     }
+
+    module.exports.a=a;
     return a;
 }
 }

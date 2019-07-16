@@ -1,9 +1,15 @@
 'use strict'
 var read=require('readline-sync');
-var inp=read.questionInt("Enter number");
+var inp;
+module.exports.i=inp=read.questionInt("Enter number");
+if(inp<1){
+    console.log("Number cant be lesser then zero");
+    return;
+}
 var res=((inp&0x0F)<<4)|((inp&0xF0)>>4);
 var res1=res;
 console.log(res.toString(2));
+module.exports.o=res1;
 console.log(res1);
 var c=0;
 

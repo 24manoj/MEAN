@@ -18,6 +18,7 @@ if(res1%2!=0){
     console.log("Not a power of2");
     return;
 }
+
 c++;
 res1=res1/2;
 }

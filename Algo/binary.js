@@ -25,6 +25,7 @@ if(n.length==0)
     console.log("N cant be null");
     return;
 }
+
 console.log("Enter values in order");
 for(var i=0;i<n;i++)
 {

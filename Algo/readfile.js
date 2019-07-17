@@ -28,6 +28,8 @@ function Binary(arr)
         else  l=mid+1;
     }
     return "not found";
-    
+
 }
+fs.appendFileSync("E://MEAN//Algo//text.txt",res);
+
 

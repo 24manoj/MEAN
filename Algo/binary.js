@@ -65,7 +65,7 @@ if(ser<a[mid])
 //if key not present in array.
 console.log("Key not found");
     return;
-}//end of function
-}//end 
+}//end of while
+}//end of function 
 //invokes static binary function
 prgm.binary();

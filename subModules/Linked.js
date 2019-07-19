@@ -24,8 +24,7 @@ class NODE
     }//end of constructur  
 }//end of class
 
-/*creating class linkedlist and member functions to add delete the nodes*/
-/*
+/*creating class linkedlist and member functions to add,delete,display,sort the nodes
 Class linkedlist contains a constructur which is initalized to null.
 */
 

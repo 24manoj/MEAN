@@ -16,8 +16,8 @@ created: 18-07-2019
 //to take input from user,importing module
 let inp=require('readline-sync');
 //importing modules from utility.js
-let classlink=require('./Linked').classlink;
-let read=require('./Linked').readfile;
+let classlink=require('../subModules/Linked').classlink;
+let read=require('../subModules/Linked').readfile;
 //local variables
 let str,arr,link,key;arr=[];
 //readfile is sub function.returns file data in byte format.
@@ -40,3 +40,4 @@ try{
 link.store();
 }catch(e){
     console.log(e);}
+ 

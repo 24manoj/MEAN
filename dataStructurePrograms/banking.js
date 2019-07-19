@@ -13,49 +13,15 @@ created: 19-07-2019
  */
 //used make the program work in mordern way
 "use strict"
-var read=require('readline-sync');
+//Importing queue.js 
 var q=require('../subModules/Queue');
+//invoking the  class constructr
 var qu=new q();
-var n=read.questionInt("Enter the Q size ");
-var arr1=[n];
-var arr2=[n];
-var i=0;
-var cash=0;
+//Invoking memebers of class
 qu.Queue();
-while(i<n)
-{
-    arr1[i]=read.question("Purpose of person(w or D)  ");
-    console.log(arr1[i]);
-    if(arr1[i]==="w"||arr1[i]==="d")
-    {
-        arr2[i]=read.questionInt("Amt of person  ",(i+1));
-        qu.enQueue(arr2[i]);
-        i+=1;   
-    } 
-    else{
-        console.log("U R option is not present in this bank..");
-        return;
-    }
-    
-}
-do{
-    var choice=read.question("Yes or NO to come out of queue   ");
-    if(choice=="yes")
-    {
-        var index=arr2.indexOf(qu.dequeue());
-        if(arr1[index]=="w") cash-=arr2[index];
-        else cash+=arr2[index];
-        if(cash<0){ 
-            console.log("NO cash in bank");
-        return;
-    }
-        
-        console.log("Upadted cash is",cash);
-    }
- n=n-1;
-}while(n==0);
-
-
-
-
+console.log("Size of queue is  ",qu.size());
+var ca=qu.cash();
+//Prints if cash is greater then 0.
+if(ca>0)
+console.log("cash Avaliable in bank is ",ca);
 

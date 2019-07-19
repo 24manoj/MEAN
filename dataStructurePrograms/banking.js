@@ -19,9 +19,10 @@ var q=require('../subModules/Queue');
 var qu=new q();
 //Invoking memebers of class
 qu.Queue();
-console.log("Size of queue is  ",qu.size());
+
 var ca=qu.cash();
 //Prints if cash is greater then 0.
+console.log("Size of queue is  ",qu.size());
 if(ca>0)
 console.log("cash Avaliable in bank is ",ca);
 

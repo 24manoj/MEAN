@@ -16,10 +16,10 @@ created: 18-07-2019
 //to take input from user,importing module
 let inp=require('readline-sync');
 //importing modules from utility.js
-let classlink=require('../subModules/Linked').classlink;
-let read=require('../subModules/Linked').readfile;
+let classlink=require('../utility/Linked').classlink;
+let read=require('../utility/Linked').readfile;
 //local variables
-let str,arr,link,key;arr=[];
+let str,arr,link,key,arr=[];
 //readfile is sub function.returns file data in byte format.
 //toString() converts to String and initalizing the value to array arr.
 str=readfile().toString();
@@ -28,16 +28,19 @@ console.log(arr);
 //invokes the constructer
 link=new classlink();
 //for each element node will be created and linked.
-arr.forEach(element => {
-link.insertfront(element);
-});
+arr.forEach(element => 
+    {
+        link.insertfront(element);
+    });
 link.display();
 //taking  user input
 key=inp.question("Enter key to search  ");
 link.search(key);
 //Exception handling
-try{
-link.store();
-}catch(e){
-    console.log(e);}
+try
+{
+    link.store();
+}
+catch(e)
+{console.log(e);}
  

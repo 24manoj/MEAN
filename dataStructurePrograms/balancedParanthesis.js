@@ -13,6 +13,8 @@ file name: balancedParanthesis
 created: 19-07-2019
  Name: Manoj kumar k s <manoj.ks.24.mk@gmail.com>
  */
+/*This program takes the input from user,splits the input,
+for each '(' push to stack ,for each')' pop from the stack.*/
 /*--->Importing modules */
 var read=require('readline-sync');
 var st=require('../subModules/stack');
@@ -23,23 +25,22 @@ var str=read.question("Enter arthematic Expression:  ");
 str=str.split('');
 clsvar.stack();
 var inc=0;
-
-str.forEach(element => {
-if(element=='(')
-{inc+=1;
-clsvar.push(element);
-}
-else if(element==')')
-{
-inc-=1;
-clsvar.pop();
-} 
-});
-
-if(clsvar.isEmpty() && inc==0 && str.length%2!==0){
+str.forEach(element =>
+    {
+        if(element=='(')
+        {
+            inc+=1;
+            clsvar.push(element);
+        }
+        else if(element==')')
+        {
+            inc-=1;
+            clsvar.pop();
+        }
+    });
+    //checks for is empty,inc to be zero and input length not be even.
+if(clsvar.isEmpty() && inc==0 && str.length%2!==0)
     console.log(" Expression is BAlanced");
-}
 else 
-{
     console.log("Expression is not Balanced");
-}
+

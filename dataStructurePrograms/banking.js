@@ -11,16 +11,16 @@ file name:Banking
 created: 19-07-2019
  Name: Manoj kumar k s <manoj.ks.24.mk@gmail.com>
  */
-//used make the program work in mordern way
+// program work in mordern way
 "use strict"
 //Importing queue.js 
-var q=require('../subModules/Queue');
+let q=require('../utility/Queue');
 //invoking the  class constructr
-var qu=new q();
+let qu=new q();
 //Invoking memebers of class
 qu.Queue();
 
-var ca=qu.cash();
+let ca=qu.cash();
 //Prints if cash is greater then 0.
 console.log("Size of queue is  ",qu.size());
 if(ca>0)

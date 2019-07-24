@@ -9,9 +9,9 @@ created: 20-07-2019
  Name: Manoj kumar k s <manoj.ks.24.mk@gmail.com>
  */
 
-let to=require('../utility/twoDarray');
+let to=require('../utility/twoDarray').arr;
 //invokes the functions
-to.twodarray()
-;
+let arr=to.twodarray();
+console.log(arr);
 
 

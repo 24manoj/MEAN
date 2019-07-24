@@ -16,15 +16,26 @@ created: 19-07-2019
 /*This program takes the input from user,splits the input,
 for each '(' push to stack ,for each')' pop from the stack.*/
 /*--->Importing modules */
-var read=require('readline-sync');
-var st=require('../subModules/stack');
-var clsvar=new st();
-//Reading input from keyboard..
-var str=read.question("Enter arthematic Expression:  ");
+let read=require('readline-sync');
+let st=require('../utility/stack');
+let clsvar=new st();
+//let pat=new RegExp(/(\[)([:alnum:].*[:alnum:]+)\]|(\()([:alnum:]+)\)|(\{)([:alnum:]+)\}/);
+let str=read.question("Enter arthematic Expression:");
+//if(!pat.exec(str)) console.log("Not a proper expression");
+
+//Reading input from keyboard.
+module.exports=balanc=(str)=>
+{
 //invoking constructor of class stack.
+let res=false;
+if(str.length === 0 || str===undefined ||str===NaN|| str.length<2)
+{ 
+    console.log("NOt a proper Expression");
+    return;
+}
 str=str.split('');
 clsvar.stack();
-var inc=0;
+let  inc=0;
 str.forEach(element =>
     {
         if(element=='(')
@@ -33,14 +44,16 @@ str.forEach(element =>
             clsvar.push(element);
         }
         else if(element==')')
-        {
+        {  res=true;
             inc-=1;
             clsvar.pop();
         }
     });
     //checks for is empty,inc to be zero and input length not be even.
-if(clsvar.isEmpty() && inc==0 && str.length%2!==0)
+    if(clsvar.isEmpty() && inc==0 && res===true)
     console.log(" Expression is BAlanced");
-else 
+    else 
     console.log("Expression is not Balanced");
 
+}
+balanc(str);

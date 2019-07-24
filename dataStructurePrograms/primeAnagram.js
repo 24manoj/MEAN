@@ -10,6 +10,7 @@ Name: Manoj kumar k s <manoj.ks.24.mk@gmail.com>
 let to=require('../utility/twoDarray').arr;
 //invokes the functions
 let arr=to.twodarray();
+
 arr.forEach(ele=>
    {
     //console.log(ele);

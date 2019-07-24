@@ -19,7 +19,6 @@ module.exports=class StackB
      constructor()
      {
          this.top=-1;
-         console.log(this.top);
          this.stackarr;
       }
      

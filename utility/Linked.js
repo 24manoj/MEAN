@@ -136,9 +136,9 @@ if not error msg.
         console.log(key,"   found @ ",count);
         console.log(key,"  Deleted from list");
         this.delete(key);
-        if(this.temp.next==null) return;
-           this.sort();
-        
+        if(this.temp!=null)
+            this.sort();
+        return;
       }
       this.temp=this.temp.next;
     }

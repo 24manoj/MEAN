@@ -66,9 +66,12 @@ let printArray=()=>
     }
     /*divides the elements in rages and checks for anagram*/
     let anaGram=(arr)=>{
+        let l=0;
+        let m=0;
         let anarray=[];
-        for(l=0;l<arr.length-1;l++){
-            for(m=l+1;m<arr.length;m++){
+        while(l<arr.length-1){
+            m=l+1;
+            while( m<arr.length){
                 if(isAana(arr[l].toString(),arr[m].toString())){
                     let b=true;
                     anarray.forEach(element=>{
@@ -79,7 +82,10 @@ let printArray=()=>
                     });
                     if(b==true) anarray.push([arr[l],arr[m]]);
                 }
+                m+=1;
+
             }
+            l+=1;
         }
         return anarray;  
     }

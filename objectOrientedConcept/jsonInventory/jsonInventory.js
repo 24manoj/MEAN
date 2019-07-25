@@ -9,7 +9,7 @@
  *******************************************************************************************************************/
 
 try {
-    let obj = require('../jsonInventory/utility');
+    let obj = require('../utility/jsonRead');
     obj.readJSON();
     obj.calculate();
 } catch (e) {

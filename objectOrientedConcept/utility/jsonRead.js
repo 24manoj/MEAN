@@ -9,8 +9,7 @@ try {
     let readJSON = () => {
         //Convert JSON file to JavaScript format
         if (isEmptyObject(json))
-            throw  "Json is empty";
-
+            throw "Json is empty";
         jsonCon = JSON.parse(json);
     }
     let isEmptyObject = (obj) => {

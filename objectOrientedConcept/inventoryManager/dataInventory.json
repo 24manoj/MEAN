@@ -1,1 +1,29 @@
-[{"rice":[{"name":"Bullet","weight":10,"price":120},{"name":"Royal","weight":10,"price":120}],"pulses":[{"name":"mk","weight":10,"price":120},{"name":"peas","weight":10,"price":120}],"wheat":[{"name":"Bullet","weight":10,"price":120},{"name":"Royal","weight":10,"price":120}]}]
+[{
+    "rice": [{
+        "name": "Bullet",
+        "weight": 10,
+        "price": 120
+    }, {
+        "name": "Royal",
+        "weight": 10,
+        "price": 120
+    }],
+    "pulses": [{
+        "name": "mk",
+        "weight": 10,
+        "price": 120
+    }, {
+        "name": "peas",
+        "weight": 10,
+        "price": 120
+    }],
+    "wheat": [{
+        "name": "Bullet",
+        "weight": 10,
+        "price": 120
+    }, {
+        "name": "Royal",
+        "weight": 10,
+        "price": 120
+    }]
+}]

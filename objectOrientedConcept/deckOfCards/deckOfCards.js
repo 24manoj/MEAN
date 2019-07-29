@@ -11,7 +11,8 @@
  * @since : 29-july-2019
  *******************************************************************************************************************/
 try {
-    let dec = require('../utility/deckOfCards');
+    let dec1 = require('../utility/deckOfCards');
+    let dec = new dec1();
     let arr1 = ["Clubs", "Diamonds", "Hearts", "Spades"];
     let arr2 = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"];
     let arr3 = [];

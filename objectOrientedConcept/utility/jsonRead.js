@@ -1,9 +1,11 @@
 let read = require('readline-sync');
 let fs = require('fs');
 //Reads JSON file
+class JSON {
 
+}
 /*readJSON takes no arguments,reads json file parse it to java Script*/
-let readJSON = () => {
+JSON.prototype.readJSON = () => {
     try {
         jsonCon = JSON.parse(fs.readFileSync('../jsonInventory/dataInventory.json'));
         if (isEmptyObject(jsonCon))
@@ -15,13 +17,13 @@ let readJSON = () => {
     }
 }
 /* This function takes no argument,returns true if obj contains no keys*/
-let isEmptyObject = (obj) => {
+JSON.prototype.isEmptyObject = (obj) => {
     return !Object.keys(obj).length;
 }
 
 /* Function calculates cost and weights of the inventory ,
 Takes no argumnets returns total inventory cost*/
-let calculate = () => {
+JSON.prototype.calculate = () => {
     try {
         JSON.inventoryCost = 0;
         let jsonCon = readJSON();
@@ -51,7 +53,7 @@ let calculate = () => {
 
 /*This function takes no argument,askes user to enter product name values to be inserted,
 converts the array format to json and write into the file*/
-let insertJson = () => {
+JSON.prototype.insertJson = () => {
     try {
         let name = [];
         let weight = [];
@@ -95,7 +97,7 @@ let insertJson = () => {
 }
 
 /*This function takes no argument,askes manager to enter product name and attribute need to be removed from inventory*/
-let removeJson = () => {
+JSON.prototype.removeJson = () => {
     try {
         let jsonCon = readJSON();
         if (isEmptyObject(jsonCon))
@@ -124,7 +126,7 @@ let removeJson = () => {
 }
 
 /* Takes no argument,reads input from manager to update the Inventory*/
-let updateJson = () => {
+JSON.prototype.updateJson = () => {
     try {
         let msg;
         let jsonCon = readJSON();
@@ -152,10 +154,4 @@ let updateJson = () => {
     }
 }
 //Exporting the functions
-module.exports = {
-    readJSON,
-    calculate,
-    insertJson,
-    removeJson,
-    updateJson
-};
+module.exports = JSON;

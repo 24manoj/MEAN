@@ -2,7 +2,10 @@ let read = require('readline-sync');
 let rw = require('./readwriteJson');
 let path = "E:\\/MEAN/objectOrientedConcept/addressBook/addressBook.json";
 class Book {
-
+    constructor()
+    {
+ this.json=null;
+    }
 }
 /*addPerson takes no argument,reads the inputs from user,writes to json file*/
 Book.prototype.addPerson = () => {
@@ -20,7 +23,7 @@ Book.prototype.addPerson = () => {
             pincode: pincode
         }
         //read json
-        let json = rw.readJson(path);
+         json = rw.readJson(path);
         json.push(insert);
         //write to json
         rw.writeJson(path, json);
@@ -34,7 +37,7 @@ Book.prototype.editPerson = () => {
 
         let key = read.question("Enter  key to find the person::");
         if (!isNaN(key)) key = parseInt(key);
-        let json = rw.readJson(path);
+         json = rw.readJson(path);
         let res = false;
         json.forEach(element => {
             let keys = Object.keys(element);
@@ -64,7 +67,7 @@ Book.prototype.deletePerson = () => {
     try {
         let key = read.question("Enter Details  to  delete Person::");
         if (!isNaN(key)) key = parseInt(key);
-        let json = rw.readJson(path);
+         json = rw.readJson(path);
         let res = false;
         json.forEach(element => {
             let keys = Object.keys(element);
@@ -93,7 +96,7 @@ Book.prototype.searchPerson = () => {
     try {
         let key = read.question("Enter key to serach:::");
         if (!isNaN(key)) key = parseInt(key);
-        let json = rw.readJson(path);
+         json = rw.readJson(path);
         let res = false;
         json.forEach(element => {
             let keys = Object.keys(element);

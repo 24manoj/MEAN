@@ -9,11 +9,12 @@
  * @overview : objectOrientedConcepts  
  * @author : manoj kumar k s <manoj.ks.24.mk@gmail.com>
  * @version : 1.0
- * @since : 26-july-2019
+ * @since : 27-july-2019
  *******************************************************************************************************************/
 
 try {
-    let obj = require('../utility/jsonRead');
+    let obj1 = require('../utility/jsonRead');
+    let obj = new obj1();
     let read = require('readline-sync');
     let choice;
     for (;;) {

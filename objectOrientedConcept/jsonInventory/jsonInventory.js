@@ -9,7 +9,8 @@
  *******************************************************************************************************************/
 
 try {
-    let obj = require('../utility/jsonRead');
+    let obj1 = require('../utility/jsonRead');
+    let obj = new obj1();
     obj.readJSON();
     obj.calculate();
 } catch (e) {

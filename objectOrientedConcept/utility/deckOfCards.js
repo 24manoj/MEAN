@@ -1,6 +1,9 @@
 let q = require('../utility/Queue');
+class card{
+
+}
 /*Function takes array as argumnet and shuffles the array and return shuffledarray*/
-let shuffel = (arr) => {
+card.prototype.shuffel = (arr) => {
     try {
         arr.sort(() => Math.random() - 0.5);
         return arr;
@@ -10,7 +13,7 @@ let shuffel = (arr) => {
 }
 /*This function takes array and number of cards to distribute,
 distribute to 4 players all the cards*/
-let distribute = (arr3, n) => {
+card.prototype.distribute = (arr3, n) => {
     try {
         let player = [];
         let player2 = [];
@@ -38,7 +41,7 @@ let distribute = (arr3, n) => {
 
 /*This function takes 4,distribute to n number players with k number of cards,
 pushes the cards of the each player to queue,sort them according ,prints back*/
-let distributeToQueue = (arr3, n, numplayers, rank) => {
+card.prototype.distributeToQueue = (arr3, n, numplayers, rank) => {
     try {
         let i = 0;
         let player = [];
@@ -74,7 +77,7 @@ let distributeToQueue = (arr3, n, numplayers, rank) => {
     }
 }
 /* This function takes two arguments ,one array and string,and prints the cards of each player*/
-let display = (arr, str) => {
+card.prototype.display = (arr, str) => {
     try {
 
 
@@ -84,9 +87,4 @@ let display = (arr, str) => {
         console.log(e);
     }
 }
-module.exports = {
-    display,
-    shuffel,
-    distribute,
-    distributeToQueue
-};
+module.exports = card;

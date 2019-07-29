@@ -13,6 +13,7 @@ try {
     let read = require('readline-sync');
     //infinite loop
     for (;;) {
+
         console.log("\n1.addPerson\n2.editPerson\n3.deletePerson\n4.searchPerson");
         let choice = read.questionInt();
         switch (choice) {

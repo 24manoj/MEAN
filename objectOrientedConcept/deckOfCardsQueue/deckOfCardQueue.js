@@ -10,7 +10,8 @@
  * @since : 29-july-2019
  *******************************************************************************************************************/
 try {
-    let dec = require('../utility/deckOfCards');
+    let dec1 = require('../utility/deckOfCards');
+    let dec = new dec1();
     // variable  declaration
     let arr1 = ["Clubs", "Diamonds", "Hearts", "Spades"];
     let arr2 = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"];
@@ -22,6 +23,7 @@ try {
 
     })
     arr3 = dec.shuffel(arr3);
+    //36 ->cards has to be distrubuted to 4 players
     dec.distributeToQueue(arr3, 36, 4, arr2);
 
 } catch (e) {

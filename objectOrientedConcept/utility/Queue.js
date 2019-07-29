@@ -10,12 +10,11 @@ class NODE {
 try {
     /* This class contains all functions of queue*/
     class singleQueue {
-        constructor() {
+        constructor() 
+        {
             this.front = null;
             this.rear = null;
         }
-
-
 
         /*add a item to queue from rear end.It requires an iteam,return nothing.*/
         enQueue(item) {

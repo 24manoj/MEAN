@@ -3,8 +3,7 @@ let readJson=(path)=>
 {
     try {
         jsonCon = JSON.parse(fs.readFileSync(path));
-
-        return jsonCon;
+       return jsonCon;
     } catch (e) {
         console.log(e)
     }

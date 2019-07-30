@@ -1,0 +1,27 @@
+[{
+    "Name": "Abc",
+    "Id": "DOC1",
+    "Specialization": "dental",
+    "Availability": "AM",
+    "PatientAttend": 4,
+    "patients": [{
+        "name": "manoj"
+    }, {
+        "name": "denatl"
+    }, {
+        "name": "yathin"
+    }, {
+        "name": "yathin"
+    }]
+}, {
+    "Name": "xyz",
+    "Id": "DOC2",
+    "Specialization": "eye",
+    "Availability": "AM",
+    "PatientAttend": 5,
+    "patients": [{
+        "name": "manoj"
+    }, {
+        "name": "yathin"
+    }]
+}]

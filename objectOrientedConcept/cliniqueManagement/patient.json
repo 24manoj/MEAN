@@ -1,1 +1,11 @@
-[]
+[{
+    "Name": "manoj",
+    "ID": "patient01",
+    "MobileNumber": 9901792700,
+    "Age": 21
+}, {
+    "Name": "yathi",
+    "ID": "patient01",
+    "MobileNumber": 7788332211,
+    "Age": 32
+}]

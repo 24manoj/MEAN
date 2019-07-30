@@ -1,3 +1,4 @@
+
 /********************************************************************************************************************
  * @Execution : default node : cmd>commericalDataProcessing.js
  * @Purpose : To learn oops concepts. 
@@ -11,6 +12,6 @@
 let stock = require('../utility/stockAccount')
 //creating class object
 let st = new stock();
-st.buy(1000, "abhi");
+st.buy(5000, "ira","ABC");
 st.valueOf();
-st.sell(1000, "yathin");
+st.sell(1000, "yathin","ABC");

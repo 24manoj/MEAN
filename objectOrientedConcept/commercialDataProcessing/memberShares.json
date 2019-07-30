@@ -1,20 +1,36 @@
 [{
     "yathin": [{
         "companyName": "ABC",
-        "shares": 8,
-        "Amount": 4000,
+        "shares": -8,
+        "Amount": -4000,
         "Time": "2019-07-27T11:42:38.744Z"
     }],
     "manoj": [{
         "companyName": "ABC",
-        "shares": 0,
-        "Amount": 0,
-        "Time": "2019-07-27T11:10:17.667Z"
+        "shares": 20,
+        "Amount": 10000,
+        "Time": "2019-07-30T09:41:03.196Z"
+    }, {
+        "companyName": "XYZ",
+        "shares": 10,
+        "Amount": 5000,
+        "Time": "2019-07-30T09:39:05.998Z"
     }],
     "abhi": [{
         "companyName": "ABC",
-        "shares": 2,
-        "Amount": 1000,
-        "Time": "2019-07-27T11:43:29.956Z"
+        "shares": 22,
+        "Amount": 11000,
+        "Time": "2019-07-30T09:34:21.926Z"
+    }, {
+        "companyName": "XYZ",
+        "shares": 10,
+        "Amount": 5000,
+        "Time": "2019-07-30T09:37:23.173Z"
+    }],
+    "ira": [{
+        "companyName": "ABC",
+        "shares": 10,
+        "Amount": 5000,
+        "Time": "2019-07-30T09:41:13.273Z"
     }]
 }]

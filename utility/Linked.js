@@ -25,8 +25,7 @@ class NODE
 /*creating class linkedlist and member functions to add,delete,display,sort the nodes
 Class linkedlist contains a constructur which is initalized to null.
 */
-
-module.exports.classlink=class linkedlist
+class linkedlist
 {
   constructor()
   {
@@ -43,13 +42,13 @@ module.exports.classlink=class linkedlist
     if(this.head===null)
     {
       this.head=newnode;
-      console.log("inserted data ",element);
+      
     }
     else
     {
       newnode.next=this.head;
       this.head=newnode;
-      console.log("inserted  data ",element);
+    
     }
    this.sort();  
   }
@@ -75,8 +74,21 @@ module.exports.classlink=class linkedlist
       }
   
     }
+    displayLink()
+    {
+      if(this.head==null)
+      {
+        console.log("Nothing to diplay.");
+        return;
+      }
+     
+      this.temp=this.head;
+      return this.temp;
+   
+     }
+ 
 
-
+ 
     /*
    getArray() ---> returns all the data exist in the linked list.
   */
@@ -210,7 +222,7 @@ if not error msg.
 * Reading data happens in synchronus manner.
 
 */
-
+ module.exports=linkedlist;
 //ES6 function declaration..
 module.exports.r=readfile=()=>
 {

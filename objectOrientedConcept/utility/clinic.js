@@ -108,44 +108,48 @@ clinic.prototype.bookAppointment = () => {
 }
 /*This method takes no argument,reads details of patient and updates in file*/
 clinic.prototype.addPatient = () => {
-    try{
-    let name = read.question("Enter Name ::");
-    let mobile = read.questionInt("Phone number::");
-    let age = read.questionInt("Age ::");
-    let insert = {
-        Name: name,
-        ID: "patient" + inc + 1,
-        MobileNumber: mobile,
-        Age: age
+    try {
+        let name = read.question("Enter Name ::");
+        let mobile = read.questionInt("Phone number::");
+        let age = read.questionInt("Age ::");
+        let insert = {
+            Name: name,
+            ID: "patient" + inc + 1,
+            MobileNumber: mobile,
+            Age: age
 
+        }
+        let js = rw.readJson("../cliniqueManagement/patient.json");
+        js.push(insert);
+        rw.writeJson("../cliniqueManagement/patient.json", js)
+    } catch (e) {
+        Console.log(e)
     }
-    let js = rw.readJson("../cliniqueManagement/patient.json");
-    js.push(insert);
-    rw.writeJson("../cliniqueManagement/patient.json", js)
-}catch(e){Console.log(e)}
 }
 
 /*This Method takes no argument,checks for the most patient visited doctor,declares him/her as popular,and their specialization*/
 clinic.prototype.checkPopular = () => {
-    try{
-    let js = rw.readJson("../cliniqueManagement/doctors.json");
+    try {
+        let js = rw.readJson("../cliniqueManagement/doctors.json");
 
-    let count = js[0].PatientAttend;
-    let name = js[0].Name;
-    js.forEach(element => {
-        let keys = Object.keys(element);
-        keys.forEach(keyele => {
-            if (element["PatientAttend"] > count) {
-                name = element["Name"];
-                count = element["PatientAttend"];
-                sp = element["Specialization"];
-            }
+        let count = js[0].PatientAttend;
+        let name = js[0].Name;
+        js.forEach(element => {
+            let keys = Object.keys(element);
+            keys.forEach(keyele => {
+                if (element["PatientAttend"] > count) {
+                    name = element["Name"];
+                    count = element["PatientAttend"];
+                    sp = element["Specialization"];
+                }
+            })
         })
-    })
 
-    console.log("Most popular Doctor is ::", name);
-    console.log("Doctor Specialization in::", sp);
-}catch(e){Console.log(e)}
+        console.log("Most popular Doctor is ::", name);
+        console.log("Doctor Specialization in::", sp);
+    } catch (e) {
+        Console.log(e)
+    }
 }
 
 module.exports = clinic;

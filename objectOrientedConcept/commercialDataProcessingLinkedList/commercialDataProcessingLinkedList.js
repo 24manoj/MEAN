@@ -8,7 +8,7 @@
  * @version : 1.0
  * @since : 30-july-2019
  *******************************************************************************************************************/
-let stock=require('../utility/stockAccount');
-let st=new stock();
+let stock = require('../utility/stockAccount');
+let st = new stock();
 st.insertToLink();
 st.display();

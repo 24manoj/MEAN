@@ -17,10 +17,10 @@ let reg = require('../utility/regularExp');
 let regExp = new reg();
 try {
     const str = "Hello <<name>>, We have your full name as <<full name>> in our system. your contact number is 91-xxxxxxxxxx. Please,let us know in case of any clarification Thank you BridgeLabz 01/01/2016";
-    let arr = regExp.readInput();
-    let res = regExp.checkRegExp(arr[0], arr[1]);
+    regExp.readInput();
+    let res = regExp.checkRegExp();
     //replaces given string with name,phone number,
-    str1 = str.replace("<<name>>", res[0][0]).replace("<<full name>>", arr[0]).replace("xxxxxxxxxx", res[1][0]).replace("01/01/2016", res[2]);
+    str1 = str.replace("<<name>>", res[0][0]).replace("<<full name>>", res[3]).replace("xxxxxxxxxx", res[1]).replace("01/01/2016", res[2]);
     console.log(str1);
 } catch (e) {
     //catches if exception occurs

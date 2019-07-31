@@ -101,7 +101,7 @@ stockAccount.prototype.valueOf = () => {
     }
 }
 /*Takes two argument amt and username,sells the shares and updates memberShares json*/
-stockAccount.prototype.sell = (amt, username,cmpny_name) => {
+stockAccount.prototype.sell = (amt, username, cmpny_name) => {
     try {
         let cmpny = rw.readJson(path1);
         let shares;
@@ -122,7 +122,7 @@ stockAccount.prototype.sell = (amt, username,cmpny_name) => {
         })
 
         rw.writeJson(path, member);
-        console.log(username," You sold u r  ", shares, " shares  of",cmpny_name);
+        console.log(username, " You sold u r  ", shares, " shares  of", cmpny_name);
 
     } catch (e) {
         console.log(e);
@@ -139,43 +139,40 @@ stockAccount.prototype.insertToLink = () => {
             li[i] = new link();
             li[i].insertfront(keys[i])
             li[i].insertfront(element[keyele])
-            i+=1;
+            i += 1;
         })
-  
+
     });
-    
+
 }
 /*This method takes no argument,reads json company file  and display the data*/
-stockAccount.prototype.display=()=>
-{
-    try{
-        
-    let i = 0;
-    let json = rw.readJson("E:/MEAN/objectOrientedConcept/commercialDataProcessingLinkedList/companyShares.json");
-    json.forEach(element => {
-        let keys = Object.keys(element);
-        keys.forEach((keyele) => {
-           
-           console.log(li[i].displayLink())
-           i+=1;
-        })
+stockAccount.prototype.display = () => {
+    try {
 
-  
-    });
+        let i = 0;
+        let json = rw.readJson("E:/MEAN/objectOrientedConcept/commercialDataProcessingLinkedList/companyShares.json");
+        json.forEach(element => {
+            let keys = Object.keys(element);
+            keys.forEach((keyele) => {
 
-    }catch(e)
-    {
-    console.log(e);
+                console.log(li[i].displayLink())
+                i += 1;
+            })
+
+
+        });
+
+    } catch (e) {
+        console.log(e);
     }
 }
 
-stockAccount.prototype.delete=(key)=>
-{
-try{
+stockAccount.prototype.delete = (key) => {
+    try {
 
-}catch(e){
-    console.log(e);
-}
+    } catch (e) {
+        console.log(e);
+    }
 
 }
 module.exports = stockAccount;

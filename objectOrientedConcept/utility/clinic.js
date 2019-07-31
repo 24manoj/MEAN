@@ -91,7 +91,7 @@ clinic.prototype.bookAppointment = () => {
             throw "NO Avaliability of Doctor for your search ";
         }
         if (res === true) {
-            res=false;
+            res = false;
             json1.forEach(element => {
                 key = Object.keys(element);
                 key.forEach(keyele => {
